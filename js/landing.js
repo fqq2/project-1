@@ -1,7 +1,7 @@
 let slideIndex = 0;
-showSlides();
+carousel();
 
-function showSlides() {
+function carousel() {
     let i;
     let slides = document.getElementsByClassName("hide-img")
     for (i = 0; i < slides.length; i++) {
@@ -10,5 +10,5 @@ function showSlides() {
     slideIndex++;
     if (slideIndex > slides.length) {slideIndex = 1}
     slides[slideIndex-1].style.display = "block";
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
+    setTimeout(carousel, 2000);
 }
